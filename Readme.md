@@ -58,3 +58,4 @@ git clone SSH-адрес_вашего_форка
 [travis-url]: https://travis-ci.com/htmlacademy-adaptive/1109467-sedona-20
 [dependency-image]: https://david-dm.org/htmlacademy-adaptive/1109467-sedona-20/dev-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/htmlacademy-adaptive/1109467-sedona-20?type=dev
+"# euro-trip" 
