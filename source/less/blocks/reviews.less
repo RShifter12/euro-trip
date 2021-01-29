@@ -1,0 +1,217 @@
+.tabs {
+        min-width: 320px;
+        max-width: 100rem;
+        padding: 0px;
+        margin: 0 auto;
+        position: relative;
+}
+/* Стили секций с содержанием */
+.tabs > div {
+        display: none;
+        padding: 15px;
+        background: #fff;
+        border-top: 1px solid rgba(44, 46, 63, 0.3);
+
+}
+.tabs>div>p {
+        margin: 0 0 5px;
+        line-height: 1.5;
+        color: #383838;
+ /* прикрутим анимацию */
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+}
+/* Описываем анимацию свойства opacity */
+
+@-webkit-keyframes fadeIn {
+        from {
+                opacity: 0;
+        }
+        to {
+                opacity: 1;
+        }
+}
+@keyframes fadeIn {
+        from {
+                opacity: 0;
+        }
+        to {
+                opacity: 1;
+        }
+}
+/* Прячем чекбоксы */
+.tabs>input {
+        display: none;
+        position: absolute;
+
+
+}
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+        display: inline-block;
+        margin-right: 5rem;
+        padding: 15px 25px;
+        font-weight: 500;
+        text-align: center;
+        color: rgba(44, 46, 63, 0.3);
+
+
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: @hover;
+          cursor: pointer;
+        }
+}
+
+
+
+
+
+
+.tabs>input:checked+label {
+
+  color: @hover;
+}
+#tabs__greece:checked~#content-tab1,
+#tabs__albania:checked~#content-tab2,
+#tabs__macedonia:checked~#content-tab3,
+#tabs__montenegro:checked~#content-tab4,
+#tabs__croatia:checked~#content-tab5  {
+ display: flex;
+//  column-gap: 17rem;
+
+
+}
+/* Убираем текст с переключателей
+* и оставляем иконки на малых экранах
+*/
+
+//@media screen and (max-width: 680px) {
+//        .tabs>label {
+//                font-size: 0;
+//        }
+//        .tabs>label:before {
+//                margin: 0;
+//                font-size: 18px;
+//        }
+//}
+///* Изменяем внутренние отступы
+//*  переключателей для малых экранов
+//*/
+//@media screen and (max-width: 400px) {
+//        .tabs>label {
+//                padding: 15px;
+//        }
+//}
+
+
+.tabs__content {
+  display: flex;
+}
+
+.tabs__title {
+  font-size: 5.5rem;
+  font-weight: 600;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20rem;
+    height: 0.3rem;
+    background-color: @hover;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.tabs__text {
+//  outline: 5px solid red;
+  font-size: 1.6rem;
+  color: rgba(44, 46, 63, 0.7);
+  line-height: 28px;
+}
+
+.tabs__review-btn {
+display: inline-block;
+  vertical-align: top;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: inherit;
+  line-height: 1.4rem;
+  padding: 2rem 0.5rem;
+//  margin: 0 auto;
+  width: 34rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: @basic;
+  text-emphasis: uppercase;
+//  outline: 5px solid red;
+}
+//.tabs__review-wrapper {
+////  position: absolute;
+//  width: 4300px;
+//  height: 600px;
+//  background-image: url(../../img1/greece-desktop.jpg);
+//  background-size: cover;
+//  outline: 5px solid red;
+//}
+.tabs__review {
+  position: absolute;
+  right: 0;
+  top: 15rem;
+//  outline: 5px solid red;
+  overflow: hidden;
+  margin: 0;
+  z-index: 1;
+  background-color: white;
+  width: 35rem;
+
+}
+.tabs__review-img {
+  width: 43rem;
+  height: 59.6rem;
+  outline: 5px solid red;
+  margin-right: 15rem;
+}
+.tabs__image {
+
+height: auto;
+  object-fit: contain;
+
+}
+
+.tabs__review-title {
+  font-size: 5.5rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    height: 0.1rem;
+    width: 10rem;
+    background-color: @basic;
+  }
+}
+
+.tabs__review-text {
+  line-height: 28px;
+}
+
+.tabs__review-author {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.tabs__review-avatar {
+  border-radius: 50%;
+  outline: 5px solid red;
+}
