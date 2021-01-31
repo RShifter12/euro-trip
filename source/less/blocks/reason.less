@@ -3,7 +3,7 @@
 }
 
 .places__desc {
-  margin-left: 20rem;
+//  margin-left: 20rem;
 //  margin-left: 375px;
 //  outline: 5px solid red;
   margin-right: 70rem;
@@ -11,8 +11,14 @@
 }
 
 .places__title {
-  margin-right: 10rem;
+  margin-bottom: 6rem;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
 //  outline: 5px solid red;
+  position: relative;
+  padding-bottom: 3rem;
+
 
   &:after {
     content: "";
@@ -21,13 +27,20 @@
     width: 20rem;
     height: 0.4rem;
     left: 0;
-    top: 8rem;
+    top: 100%;
     background-color: @basic;
   }
 }
 
+.places__text {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
 
 .places__photos {
+
   display: flex;
   flex-wrap: wrap;
   column-gap: 5rem;
@@ -35,10 +48,14 @@
   margin: 0 auto;
 //  max-width: 100rem;
 //  min-width: 10rem;
-  padding-right: 37.5rem;
-  padding-left: 37.5rem;
-  justify-content: center;
+
+  justify-content: safe center;;
   outline: 5px solid red;
+}
+
+.places__photo-wrapper {
+  position: relative;
+  max-height: 43rem;
 }
 
 .places__photo {
@@ -48,14 +65,14 @@
 
 }
 
-.places__photo-wrapper {
-  position: relative;
-}
+
+
+
 .places__photo-caption {
   display: block;
   position: absolute;
-  bottom: -2rem;
-  outline: 5px solid red;
+  bottom: 0rem;
+//  outline: 5px solid red;
 //  left: 45%;
   background-color: #fff;
   padding: 2rem 0rem;
@@ -64,6 +81,7 @@ font-size: 24px;
 line-height: 29px;
   margin-left: 6.5rem;
   margin-right: 6.5rem;
+  margin-bottom: 0;
 //line-height: 29px;
 text-align: center;
   width: 21.5rem;

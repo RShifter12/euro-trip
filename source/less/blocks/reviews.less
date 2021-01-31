@@ -1,16 +1,18 @@
 .tabs {
-        min-width: 320px;
-        max-width: 100rem;
-        padding: 0px;
+
+//        padding: 0px;
         margin: 0 auto;
         position: relative;
+
+//  outline: 5px solid red;
+  padding-bottom: 24rem;
 }
 /* Стили секций с содержанием */
 .tabs > div {
         display: none;
-        padding: 15px;
+//        padding: 15px;
         background: #fff;
-        border-top: 1px solid rgba(44, 46, 63, 0.3);
+//        border-top: 1px solid rgba(44, 46, 63, 0.3);
 
 }
 .tabs>div>p {
@@ -50,12 +52,19 @@
 
 
 }
+
+
 /* Стили переключателей вкладок (табов) */
 .tabs>label {
         display: inline-block;
         margin-right: 5rem;
-        padding: 15px 25px;
+//        padding: 15px 25px;
+  padding-left: 0;
+  padding-right: 8rem;
+  padding-top: 2.5rem;
+  padding-bottom: 11rem;
         font-weight: 500;
+//  padding-left: 0;
         text-align: center;
         color: rgba(44, 46, 63, 0.3);
 
@@ -113,21 +122,25 @@
 
 .tabs__content {
   display: flex;
+  column-gap: 10rem;
 }
 
 .tabs__title {
   font-size: 5.5rem;
   font-weight: 600;
   position: relative;
+  padding-bottom: 3rem;
+  line-height: 90px;
 
   &:after {
     content: "";
     position: absolute;
-    width: 20rem;
+    width: 17.5rem;
     height: 0.3rem;
     background-color: @hover;
     left: 0;
     bottom: 0;
+
   }
 }
 
@@ -136,6 +149,12 @@
   font-size: 1.6rem;
   color: rgba(44, 46, 63, 0.7);
   line-height: 28px;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  color: rgba(44, 46, 63, 0.7);
+//  margin-right: 7rem;
+//  flex-grow: 1;
+
 }
 
 .tabs__review-btn {
@@ -145,14 +164,24 @@ display: inline-block;
   font-size: 1.2rem;
   font-family: inherit;
   line-height: 1.4rem;
-  padding: 2rem 0.5rem;
+  padding: 3rem 4rem;
 //  margin: 0 auto;
-  width: 34rem;
+//  width: 34rem;
   color: white;
   border: none;
   cursor: pointer;
   background-color: @basic;
-  text-emphasis: uppercase;
+
+
+  font-size: 12px;
+line-height: 15px;
+
+
+
+align-items: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+
 //  outline: 5px solid red;
 }
 //.tabs__review-wrapper {
@@ -166,52 +195,75 @@ display: inline-block;
 .tabs__review {
   position: absolute;
   right: 0;
-  top: 15rem;
+  top: 0;
+  margin-top: 10rem;
+//  margin-bottom: 14rem;
 //  outline: 5px solid red;
   overflow: hidden;
-  margin: 0;
+//  margin: 0;
   z-index: 1;
   background-color: white;
-  width: 35rem;
+  max-width: 38rem;
+  padding: 3rem 3rem;
+//  min-height: 36.7rem;
 
 }
 .tabs__review-img {
-  width: 43rem;
-  height: 59.6rem;
+
   outline: 5px solid red;
-  margin-right: 15rem;
+  margin-right: 25rem;
+//  flex-grow: 3;
 }
 .tabs__image {
 
-height: auto;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
+  max-width: 43rem;
 
+}
+
+.tabs__review-wrapper {
+  outline: 5px solid red;
+  position: relative;
+  outline: 5px solid red;
 }
 
 .tabs__review-title {
   font-size: 5.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+
 
   &:after {
     content: "";
     position: absolute;
-    top: 7rem;
-    left: 2rem;
+    bottom: 0rem;
+    left: 0rem;
     height: 0.1rem;
     width: 10rem;
     background-color: @basic;
+
   }
 }
 
 .tabs__review-text {
   line-height: 28px;
+  margin-top: 2rem;
+  color: rgba(44, 46, 63, 0.7);
+
+
 }
 
 .tabs__review-author {
   display: flex;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .tabs__review-avatar {
   border-radius: 50%;
-  outline: 5px solid red;
+  height: 100%;
+  margin-top: 0.5rem;
+//  outline: 5px solid red;
 }
