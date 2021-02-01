@@ -5,7 +5,7 @@
 //    height: 10rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
-  outline: 5px solid red;
+//  outline: 5px solid red;
 
 }
 
@@ -16,7 +16,12 @@
 .main-nav__text {
     color: @black;
 
-    &:hover {
+  font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+
+    &:hover,
+    &:focus {
         color: @basic;
     }
 }
@@ -27,28 +32,51 @@
     width: 30px;
     height: 30px;
 
-    &:hover {
+    &:hover,
+    &:focus {
         fill: @basic;
-        stroke: @basic;
+//        stroke: @basic;
     }
+
+  &:hover + .main-nav__tel {
+    color: @basic;
+  }
 }
 
 .main-nav__content {
     display: flex;
     column-gap: 40px;
+
 }
 
 .main-nav__phone-container {
     display: flex;
+  outline: 5px solid red;
+
+
 }
 
 .main-nav__tel {
     color: @black;
     text-decoration: underline;
 
-    &:hover {
-        color: @basic;
-    }
+
+  &:hover {
+    color: @basic;
+
+  }
+
+  &:hover ~ svg {
+  fill: @basic;
+  }
+
+
+}
+
+
+
+.phone__icon {
+outline: 5px solid red;
 }
 
 

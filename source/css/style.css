@@ -183,8 +183,8 @@ body {
 }
 .intro {
   background-image: url(../../img1/main-picture.jpg);
-  width: 100%;
-  max-height: 86rem;
+  max-width: 1920px;
+  min-height: 86rem;
   margin-bottom: 20rem;
   outline: 5px solid red;
 }
@@ -194,10 +194,29 @@ body {
   min-height: 86rem;
   align-items: center;
   margin-right: 6rem;
+  outline: 5px solid green;
 }
 .intro__inner {
-  width: 42rem;
+  width: 40rem;
   height: auto;
+}
+.btn {
+  vertical-align: top;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: inherit;
+  line-height: 1.4rem;
+  padding: 3rem 3.2em;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #FE7865;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #F17D4B;
 }
 .intro__text {
   margin-top: -12rem;
@@ -215,27 +234,13 @@ body {
   font-size: 1.6rem;
   line-height: 170%;
   color: white;
-}
-.intro__button {
-  vertical-align: top;
-  font-weight: 700;
-  font-size: 1.2rem;
-  font-family: inherit;
-  line-height: 1.4rem;
-  padding: 2em 1.5em;
-  width: 34rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  background-color: #FE7865;
-  -webkit-text-emphasis: uppercase;
-  text-emphasis: uppercase;
-  outline: 5px solid red;
+  margin-bottom: 4rem;
 }
 .arrow {
   width: 1.4rem;
   height: 1.4rem;
   fill: none;
+  margin-left: 12.5rem;
 }
 .places {
   padding-bottom: 10rem;
@@ -683,8 +688,12 @@ body {
 }
 .questions__image-wrapper {
   text-align: left;
+  background-image: url(../../img1/sky.jpg);
+  outline: 5px solid red;
+  width: 844px;
+  height: 455px;
 }
-.questions__form {
+.questions__input-wrapper {
   margin-bottom: 2.5rem;
   display: flex;
   -moz-column-gap: 1rem;
@@ -895,13 +904,6 @@ body {
   outline: 5px solid red;
   display: flex;
 }
-.main-nav__tel {
-  display: block;
-  margin: 0 auto;
-  outline: 5px solid red;
-  margin-left: 0;
-  margin-left: 4rem;
-}
 .tabs {
   margin: 0 auto;
   position: relative;
@@ -1004,24 +1006,6 @@ body {
   margin-top: 8rem;
   margin-bottom: 5rem;
   color: rgba(44, 46, 63, 0.7);
-}
-.tabs__review-btn {
-  display: inline-block;
-  vertical-align: top;
-  font-weight: 700;
-  font-size: 1.2rem;
-  font-family: inherit;
-  line-height: 1.4rem;
-  padding: 3rem 4rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  background-color: #FE7865;
-  font-size: 12px;
-  line-height: 15px;
-  align-items: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 .tabs__review {
   position: absolute;
@@ -2048,15 +2032,18 @@ body {
   justify-content: space-around;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  outline: 5px solid red;
 }
 .main-nav__item {
   font-size: 0;
 }
 .main-nav__text {
   color: #141517;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
 }
-.main-nav__text:hover {
+.main-nav__text:hover,
+.main-nav__text:focus {
   color: #FE7865;
 }
 .phone__icon {
@@ -2065,9 +2052,12 @@ body {
   width: 30px;
   height: 30px;
 }
-.phone__icon:hover {
+.phone__icon:hover,
+.phone__icon:focus {
   fill: #FE7865;
-  stroke: #FE7865;
+}
+.phone__icon:hover + .main-nav__tel {
+  color: #FE7865;
 }
 .main-nav__content {
   display: flex;
@@ -2076,6 +2066,7 @@ body {
 }
 .main-nav__phone-container {
   display: flex;
+  outline: 5px solid red;
 }
 .main-nav__tel {
   color: #141517;
@@ -2083,6 +2074,12 @@ body {
 }
 .main-nav__tel:hover {
   color: #FE7865;
+}
+.main-nav__tel:hover ~ svg {
+  fill: #FE7865;
+}
+.phone__icon {
+  outline: 5px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
