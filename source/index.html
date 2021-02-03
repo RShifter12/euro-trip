@@ -12,14 +12,18 @@
 <body>
   <header class="header">
    <div class="container">
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+
       <a href="#" class="main-nav__item"> Way-логотип
-          <img src="img1/logo-way.svg" alt="логотип Way">
+          <svg class="logo">
+                 <use href="sprite.svg#logo"></use>
+              </svg>
       </a>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__content">
           <a href="#place" class="main-nav__text">О путешествии</a>
           <a href="#price" class="main-nav__text">Цены</a>
-          <div class="main-nav__phone-container">
+          <div class="main-nav__phone-container phone__container">
               <svg class="main-nav__icon phone__icon">
                  <use href="sprite.svg#phone"></use>
               </svg>
@@ -39,7 +43,7 @@
           <div class="intro__wrapper">
             <div class="intro__inner">
               <div class="intro__text">
-                 <p class="intro__title">Путешествие по Европе</p>
+                <p class="intro__title">Путешествие по Европе</p>
                 <p class="intro__describe">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
         <a href="#tabs" class="btn intro__btn">смотреть тур
           <svg class="arrow">
@@ -61,38 +65,46 @@
       <div class="places__photos">
        <div class="places__photo-wrapper">
          <picture>
-           <img src="img1/places__greece.jpg" alt="Greece" class="places__photo">
+          <source media="(max-width: 1024px)" srcset="img1/places__greece-tablet.jpg 1x, img1/places__greece-tablet2x.jpg 2x">
+           <img src="img1/places__greece.jpg" srcset="img1/places__greece2x.jpg" alt="Greece" class="places__photo">
+
            </picture>
            <p class="places__photo-caption">Греция</p>
        </div>
 
        <div class="places__photo-wrapper">
          <picture>
-           <img src="img1/places__albania.jpg" alt="Greece" class="places__photo">
+          <source media="(max-width: 1024px)" srcset="img1/places__albania-tablet.jpg 1x, img1/places__albania-tablet2x.jpg 2x">
+           <img src="img1/places__albania.jpg" srcset="img1/places__albania2x.jpg" alt="Greece" class="places__photo">
            </picture>
            <p class="places__photo-caption">Албания</p>
        </div>
 
        <div class="places__photo-wrapper">
          <picture>
-           <img src="img1/places__macedonia.jpg" alt="Greece" class="places__photo">
+          <source media="(max-width: 1024px)" srcset="img1/places__macedonia-tablet.jpg 1x, img1/places__macedonia-tablet2x.jpg 2x">
+           <img src="img1/places__macedonia.jpg" srcset="img1/places__macedonia2x.jpg" alt="Greece" class="places__photo">
            </picture>
            <p class="places__photo-caption">Македония</p>
        </div>
-
-       <div class="places__photo-wrapper">
+<div class="places__photo-inner">
+  <div class="places__photo-wrapper">
          <picture>
-           <img src="img1/places__montenegro.jpg" alt="Greece" class="places__photo">
+          <source media="(max-width: 1024px)" srcset="img1/places__montenegro-tablet.jpg 1x, img1/places__montenegro-tablet2x.jpg 2x">
+           <img src="img1/places__montenegro.jpg" srcset="img1/places__montenegro2x.jpg" alt="Greece" class="places__photo">
            </picture>
            <p class="places__photo-caption">Черногория</p>
        </div>
 
        <div class="places__photo-wrapper">
          <picture>
-           <img src="img1/places__croatia.jpg" alt="Greece" class="places__photo">
+          <source media="(max-width: 1024px)" srcset="img1/places__croatia-tablet.jpg 1x, img1/places__croatia-tablet2x.jpg 2x">
+           <img src="img1/places__croatia.jpg" srcset="img1/places__croatia2x.jpg" alt="Greece" class="places__photo">
            </picture>
            <p class="places__photo-caption">Хорватия</p>
        </div>
+</div>
+
 
 
       </div>
@@ -100,25 +112,9 @@
 
 
 
-
-         <!--
-          <div class="reason reason--bg-blue">
-            <h2 class="visually-hidden">Причины почему Седона лучше</h2>
-            <section class="reason__desc">
-              <h2 class="visually-hidden">Причина первая</h2>
-            <h3 class="reason__title">Настоящий городок</h3>
-            <span class="reason__number">— №1 —</span>
-            <p class="reason__description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-          </section>
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-            <img class="reason__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg"  alt="американский флаг развивается на ветру">
-          </picture>
-        </section>
--->
 
 <div id="tabs" class="tabs">
+
 
     <input id="tabs__greece" type="radio" name="tabs" checked>
    <label for="tabs__greece" title="Вкладка 1">Греция</label>
@@ -144,7 +140,12 @@
       </div>
 <div class="tabs__review-wrapper">
       <div class="tabs__review-img">
-        <img src="img1/review__greece.jpg" alt="Греция" class="tabs__image">
+          <picture>
+          <source media="(max-width: 767px)" srcset="img1/review__greece-mobile.jpg 1x, img1/review__greece-mobile2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="img1/review__greece-tablet.jpg 1x, img1/review__greece-tablet2x.jpg 2x">
+            <img src="img1/review__greece.jpg" class="tabs__image" alt="Греция">
+          </picture>
+
         </div>
 
           <div class="tabs__review">
@@ -165,12 +166,16 @@
      <div class="tabs__content-left">
         <b class="tabs__title">Албания</b>
         <p class="tabs__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
-        <button type="button" class="tabs__review-btn">купить тур сейчас</button>
+        <button type="button" class="btn tabs__review-btn">купить тур сейчас</button>
       </div>
 <div class="tabs__review-wrapper">
       <div class="tabs__review-img">
-        <img src="img1/review__albania.jpg" alt="Албания" class="tabs-content__image">
-        </div>
+<picture>
+         <source media="(max-width: 767px)" srcset="img1/review__albania-mobile.jpg 1x, img1/review__albania-mobile2x.jpg 2x">
+          <source media="(max-width: 1024px)" srcset="img1/review__albania-tablet.jpg 1x, img1/review__albania-tablet2x.jpg 2x">
+            <img src="img1/review__albania.jpg" class="tabs__image" alt="Албания">
+          </picture>
+                </div>
         <div class="tabs__review">
           <b class="tabs__review-title">Отзывы</b>
           <p class="tabs__review-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
@@ -187,11 +192,14 @@
      <div class="tabs__content-left">
         <b class="tabs__title">Македония</b>
         <p class="tabs__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-        <button type="button" class="tabs__review-btn">купить тур сейчас</button>
+        <button type="button" class="btn tabs__review-btn">купить тур сейчас</button>
       </div>
 <div class="tabs__review-wrapper">
       <div class="tabs__review-img">
-        <img src="img1/review__macedonia.jpg" alt="Греция" class="tabs__image">
+<picture>
+          <source media="(max-width: 1024px)" srcset="img1/review__macedonia-tablet.jpg 1x, img1/review__macedonia-tablet2x.jpg 2x">
+            <img src="img1/review__macedonia.jpg" class="tabs__image" alt="">
+          </picture>
         </div>
         <div class="tabs__review">
           <b class="tabs__review-title">Отзывы</b>
@@ -209,11 +217,15 @@
      <div class="tabs__content-left">
         <b class="tabs__title">Черногория</b>
         <p class="tabs__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. </p>
-        <button type="button" class="tabs__review-btn">купить тур сейчас</button>
+        <button type="button" class="btn tabs__review-btn">купить тур сейчас</button>
       </div>
 <div class="tabs__review-wrapper">
       <div class="tabs__review-img">
-        <img src="img1/review__montenegro.jpg" alt="Греция" class="tabs__image">
+       <picture>
+          <source media="(max-width: 1024px)" srcset="img1/review__montenegro-tablet.jpg 1x, img1/review__montenegro-tablet2x.jpg 2x">
+            <img src="img1/review__montenegro.jpg" class="tabs__image" alt="">
+          </picture>
+
         </div>
         <div class="tabs__review">
           <b class="tabs__review-title">Отзывы</b>
@@ -231,16 +243,18 @@
      <div class="tabs__content-left">
         <b class="tabs__title">Хорватия</b>
         <p class="tabs__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-        <button type="button" class="tabs__review-btn">купить тур сейчас</button>
+        <button type="button" class="btn tabs__review-btn">купить тур сейчас</button>
       </div>
 <div class="tabs__review-wrapper">
       <div class="tabs__review-img">
-        <img src="img1/review__croatia.jpg" alt="Греция" class="tabs__image">
+       <picture>
+          <source media="(max-width: 1024px)" srcset="img1/review__croatia-tablet.jpg 1x, img1/review__croatia-tablet2x.jpg 2x">
+            <img src="img1/review__croatia.jpg" class="tabs__image" alt="">
+          </picture>
         </div>
         <div class="tabs__review">
           <b class="tabs__review-title">Отзывы</b>
           <p class="tabs__review-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
-
           <div class="tabs__review-author">
             <img src="img1/VM.jpg" alt="" class="tabs__review-avatar">
             <p class="tabs__review-name">Владимир Мулицин</p>
@@ -268,9 +282,10 @@
       <li>Экскурсии по удивительно красивым местам Европы</li>
     </ul>
 <!--    <div class="price__wrapper">-->
-      <button type="button" class="btn ">купить тур сейчас</button>
+      <button type="button" class="btn price__btn">купить тур сейчас</button>
 <!--    </div>-->
   </div>
+
   <div class="price__card">
    <div class="price__inner">
      <h2 class="price__title">Экономный</h2>
@@ -286,18 +301,18 @@
       <li>Экскурсии по удивительно красивым местам Европы</li>
     </ul>
 <!--    <div class="price__wrapper">-->
-      <a href="#" class="price__btn">купить тур сейчас</a>
+      <button type="button" class="btn price__btn">купить тур сейчас</button>
 <!--    </div>-->
   </div>
   <div class="price__intro">
     <h2 class="price__main-title">Цены</h2>
     <p class="price__description">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
     <h3 class="price__social">Свяжитесь с нами</h3>
-    <div class="price__social-wrapper">
-      <svg class="price__icon phone__icon">
+    <div class="phone__container price__phone">
+      <svg class="phone__icon phone__icon--price">
       <use href="sprite.svg#phone"></use>
       </svg>
-    <a href="tel:+749978468446" class="main-nav__tel">+7 (499) -784-684-46</a>
+    <a href="tel:+749978468446" class="price__tel">+7 (499) -784-684-46</a>
     </div>
 
 
@@ -306,103 +321,39 @@
 
 <div class="questions">
    <div class="questions__image-wrapper">
-<!--     <img src="img1/sky.jpg" alt="" class="questions__image">-->
-   </div>
-  <form class="questions__modal">
+  <form class="questions__modal" action="https://echo.htmlacademy.ru" method="get">
     <h2 class="questions__title">У Вас остались вопросы?</h2>
     <p class="questions__intro">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
     <div class="questions__input-wrapper">
       <label class="questions__phone-number-label" for="tel">+7 </label>
-       <input class="input questions__phone-number" type="tel" id="tel" name="phone_number"  pattern="+7 ([0-9]{3}([0-9]{3})([0-9]{2})([0-9]{2})" placeholder="Введите 10 цифр номера" required>
+       <input class="input questions__phone-number" type="tel" id="tel" name="phone_number"  pattern="^\d{3}\d{7}$" placeholder="Введите 10 цифр номера" maxlength="10" minlength="10" required>
        <label class="questions__email-label" for="email"></label>
        <input class="input questions__email" type="email" id="email" placeholder="E-mail" name="email">
     </div>
-    <input type="submit" class="questions__btn">
+    <input type="submit" class="btn questions__btn">
+  </form>
+  </div>
+</div>
+
+<div class="modal">
+  <h2 class="modal__title">Купить тур </h2>
+  <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+    <div class="modal__input-wrapper">
+      <label class="questions__modal-number-label" for="tel_modal">+7 </label>
+       <input class="input modal__phone-number" type="tel" id="tel_modal" name="phone_number"  pattern="^\d{3}\d{7}$" placeholder="Введите 10 цифр номера" maxlength="10" minlength="10" required>
+       <label class="modal__email-label" for="email_mail"></label>
+       <input class="input modal__email" type="email" id="email_mail" placeholder="E-mail" name="email">
+    </div>
+    <input type="submit" class="btn modal__btn">
   </form>
 </div>
 
-<!--
-        <div class="reviews">
-            <div class="reviews__item reviews__item--greece">
-              <b class="reviews__title">Греция</b>
-              <p class="reviews__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-            </div>
-            <div class="reviews__item reviews__item--albania">
-              <b class="reviews__title">Албания</b>
-              <p class="features__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния. </p>
-            </div>
-            <div class="reviews__item reviews__item--makedonia">
-              <b class="features__title">Македония</b>
-              <p class="features__descr">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-            </div>
-            <div class="reviews__item reviews__item--montenegro">
-              <b class="features__title">Черногория</b>
-              <p class="features__descr">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
-            </div>
-            <div class="reviews__item reviews__item--croatia">
-              <b class="features__title">Хорватия</b>
-              <p class="features__descr">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-            </div>
-          </div>
--->
-
-<!--
-          <section class="reviews__item reviews__item--montenegro">
-            <h2 class="visually-hidden">Причины почему Седона лучше</h2>
-            <section class="reason__desc reason__desc--second">
-              <h2 class="visually-hidden">Причина вторая</h2>
-            <h3 class="reason__title">Там есть мост дьявола</h3>
-            <span class="reason__number">— №2 —</span>
-            <p class="reason__description">Да, по нему можно пройти! если вы осмелитесь, конечно </p>
-          </section>
-          <div class="reason__picture-wrapper">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-            <img class="reason__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg"  alt="скалы Седоны">
-          </picture>
 </div>
-</section>
-
-          <div class="features features--bg-grey">
-            <div class="features__item features__item--grey">
-              <h3 class="features__title features__title--grey">Небольшая площадь</h3>
-              <span class="features__number features__number--grey">— №3 —</span>
-              <p class="features__description features__description--grey">Все интересные местанаходятся очень близко</p>
-            </div>
-            <div class="features__item features__item--grey">
-              <h3 class="features__title features__title--grey">Красивая дорога</h3>
-              <span class="features__number features__number--grey">— №4 —</span>
-              <p class="features__description features__description--grey">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
-            </div>
-            <div class="features__item features__item--grey">
-              <h3 class="features__title features__title--grey">Мало туристов</h3>
-            <span class="features__number features__number--grey">— №5 —</span>
-              <p class="features__description features__description--grey">Большинство едет в гранд каньон и толпится там</p>
-            </div>
-        </div>
-
-
-      <section class="book">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-          <b class="book__title"> Заинтересовались?</b>
-          <p class="book__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <a href="search.html" class="book__btn">Найти гостиницу</a>
-      </section>
-      <section class="modal">
-        <h2 class="visually-hidden">как нас найти</h2>
-          <iframe class="modal__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418954.49201322166!2d-112.0742621098664!3d34.87928793203793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1594552935549!5m2!1sru!2sru"
-
-           allowfullscreen
-         title="Седона, город в Аризоне"> </iframe>
-
-      </section>
---></div>
     </main>
 <div class="container">
   <footer class="footer">
 
-    <div class="footer__container footer__container--next-trip">
+    <div class="footer__cities">
             <h2 class="footer__title">Следующие путешествия</h2>
             <div class="footer__columns">
               <div class="footer__column">
@@ -429,22 +380,22 @@
             </div>
 
       </div>
-      <div class="footer__container">
+      <div class="footer__social">
              <h2 class="footer__title">Наши контакты</h2>
              <div class="footer__social-wrapper">
              <svg class="footer__icon-mail">
                  <use href="sprite.svg#mail"></use>
               </svg>
-               <a class="footer__social" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+               <a class="footer__mail" href="mailto:puteshestviemechta@gmail.ru">Почта</a>
              </div>
 <div class="footer__social-wrapper">
             <svg class="footer__icon-phone">
                  <use href="sprite.svg#phone"></use>
               </svg>
-             <a class="footer__social" href="tel:+78142332211">+7(814)-233-22-11</a>
+             <a class="footer__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
         </div>
       </div>
-      <div class="footer__container">
+      <div class="footer__corporate">
            <h2 class="footer__title">Корпоративные путешествия</h2>
            <p class="footer__text footer__text--right">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
       </div>

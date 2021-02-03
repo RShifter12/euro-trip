@@ -27,12 +27,12 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*",
-    "source/img/*",
+    "source/img1/*",
     "source/js/*.js",
     "source/*.ico",
     "source/*.html",
+    "source/*.svg",
     "source/css/*"
-
   ], {
     base: "source"
   })
@@ -51,10 +51,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-//    .pipe(csso())
-//    .pipe(rename("styles.min.css"))
+    .pipe(csso())
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -63,10 +63,10 @@ exports.styles = styles;
 // sprite
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("source/img1/**/icon-*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img1"))
 }
 
 exports.sprite = sprite;
@@ -74,13 +74,13 @@ exports.sprite = sprite;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img1/**/*.{jpg,png,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img1"))
 }
 
 exports.images = images;
@@ -89,9 +89,9 @@ exports.images = images;
 // WebP
 
 const webpicture = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img1/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img1"))
 };
 
 exports.webp = webpicture;
@@ -112,7 +112,7 @@ exports.webp = webpicture;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,

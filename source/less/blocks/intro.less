@@ -1,247 +1,166 @@
 .intro {
-  background-image: url(../../img1/main-picture.jpg);
-//  outline: 5px solid red;
+  background-image: url(.././img1/main-picture.jpg);
   max-width: 1920px;
-  min-height: 86rem;
+  height: 86rem;
   margin-bottom: 20rem;
-    outline: 5px solid red;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(.././img1/main-picture2x.jpg);
+  }
+
+  @media (max-width: @tablet-width) {
+    background-image: url(.././img1/main-picture-tablet.jpg);
+    background-repeat: no-repeat;
+    max-width: 768px;
+    margin-bottom: 8rem;
+    height: 34.4rem;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(/./img1/main-picture-tablet2x.jpg);
+    }
+  }
+
+  @media (max-width: @mobile-width) {
+    background-image: url(.././img1/main-picture-mobile.jpg);
+    min-width: 320px;
+    height: 235px;
+    background-size: cover;
+    margin-bottom: 20rem;
 
 
-
+    @media (min-resolution: 2dppx) {
+      background-image: url(.././img1/main-picture-mobile2x.jpg);
+    }
+  }
 }
-
-
 
 .intro__wrapper {
   display: flex;
   justify-content: flex-end;
-  min-height: 86rem;
-//  align-items: center;
-//  height: 100%;
+  height: 86rem;
   align-items: center;
-//  width: 1rem;
-  margin-right: 6rem;
-  outline: 5px solid green;
-//
+
+  @media (max-width: @tablet-width) {
+    height: 344px;
+    width: 100%;
+  }
 }
+
 .intro__inner {
-//  align-items: center;
-  width: 40rem;
+
+  width: 46rem;
   height: auto;
 
+ @media (max-width: @tablet-width){
+  width: 100%;
 
-}
-
-.btn {
-  vertical-align: top;
-  font-weight: 700;
-  font-size: 1.2rem;
-  font-family: inherit;
-  line-height: 1.4rem;
-  padding: 3rem 3.2em;
-//  width: 34rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  background-color: @basic;
-   text-transform: uppercase;
-  letter-spacing: 2px;
-
-  &:hover,
-  &:focus {
-    background-color: @hover;
   }
-
-
 }
+
+
 
 .intro__text {
-//  max-width: 377px;
-//  align-items: center;
-  margin-top: -12rem;
+  margin-top: -14rem;
+  height: 35rem;
+  margin-right: 5rem;
+
+  @media (max-width: @tablet-width) {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 42rem;
+    margin-top: -2rem;
+    height: auto;
+  }
+
+  @media (max-width: @mobile-width) {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 28.8rem;
+
+
+  }
 }
+
 .intro__title {
   font-weight: 600;
   font-size: 5.5rem;
   color: white;
   line-height: 80px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   margin-top: 0;
-//  align-items: center;
+  letter-spacing: -1.10667px;
+
+  @media (max-width: @tablet-width) {
+    letter-spacing: normal;
+    font-size: 30px;
+    line-height: 4.5rem;
+  }
+
+  @media (max-width: @mobile-width) {
+//    display: flex;
+    max-width: 30rem;
+    margin-bottom: 10rem;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-top: 16rem;
+    align-self: center;
+  }
 }
+
 .intro__describe {
+  margin-top: 3rem;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 170%;
+  line-height: 2.7rem;
   color: white;
-  margin-bottom: 4rem;
-}
-.intro__button {
+  margin-bottom: 3rem;
+  margin-right: 4rem;
+  letter-spacing: -0.466667px;
 
 
+  @media (max-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 2rem;
+
+  }
+
+  @media (max-width: @mobile-width) {
+    color: #2C2E3F;
+//    margin-top: 2rem;
+
+  }
 }
+
+.intro__btn {
+//  outline: 5px solid red;
+  max-width: 34rem;
+  height: auto;
+
+  @media (max-width: @tablet-width) {
+    max-width: 25rem;
+//    padding: 1.5rem 6rem;
+    text-align: center;
+
+  }
+
+  @media (max-width: @mobile-width) {
+    max-width: 28.8rem;
+  }
+}
+
 .arrow {
   width: 1.4rem;
   height: 1.4rem;
   fill: none;
-  margin-left: 12.5rem;
+  margin-left: 12rem;
+
+  @media (max-width: @tablet-width) {
+    margin-left: 4rem;
+  }
 }
 
-////
-//.intro::before {
-//  content: "";
-//  background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-//  background-size: 280px, 100%, cover;
-//  width: 100%;
-//  height: 390px;
-//  position: absolute;
-//  background-repeat: no-repeat;
-//  top: 0px;
-//  left: 0;
-//  z-index: -1;
-//  background-position: center, bottom, center;
-//  background-color: blue;
-//
-//  @media (min-resolution: 2dppx) {
-//      background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
-//      background-size: 280px, contain, cover;
-//      width: 100%;
-//      height: 390px;
-//      position: absolute;
-//      background-repeat: no-repeat;
-//      top: 0px;
-//      left: 0;
-//      z-index: -1;
-//      background-position: center, bottom, center;
-//      background-color: blue;
-//    }
-//
-//  // bottom: 300px;
-//
-//  @media (min-width: @tablet-width) {
-//    display: block;
-//    background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
-//    height: 517px;
-//    background-size: 460px, 100%, cover;
-//    // top: 10px;
-//    background-position: center 76px, bottom, center;
-//    background-repeat: no-repeat;
-//    background-color: blue;
-//
-//    @media (min-resolution: 2dppx) {
-//        background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
-//        height: 517px;
-//        background-size: 460px, 100%, cover;
-//        // top: 10px;
-//        background-position: center 76px, bottom, center;
-//        background-repeat: no-repeat;
-//        background-color: blue;
-//      }
-//  }
-//
-////  @media (min-width: @desktop-width) {
-////    background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
-////    height: 517px;
-////    background-size: 460px, 100%, cover;
-////    // top: 10px;
-////    background-position: center 76px, bottom, center;
-////    background-repeat: no-repeat;
-////    background-color: blue;
-////
-////    @media (min-resolution: 2dppx) {
-////        background: url("../img/text-sedona-index.svg"),url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
-////        height: 517px;
-////        background-size: 460px, 100%, cover;
-////        // top: 10px;
-////        background-position: center 76px, bottom, center;
-////        background-repeat: no-repeat;
-////        background-color: blue;
-////      }
-////  }
-//
-//  @media (min-width: @desktop-width) {
-//
-////    height: 517px;
-//    background-size: 100%;
-//    // top: 10px;
-////    background-position: center 76px, bottom, center;
-//    background-repeat: no-repeat;
-//    background-color: blue;
-//    z-index: 0;
-//
-//    @media (min-resolution: 2dppx) {
-//        background: url("../img/text-sedona-index.svg"),url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
-//        height: 517px;
-//        background-size: 460px, 100%, cover;
-//        // top: 10px;
-//        background-position: center 76px, bottom, center;
-//        background-repeat: no-repeat;
-//        background-color: blue;
-//      }
-//  }
-//
-//}
-//
-////.intro {
-////  z-index: 1;
-////  position: absolute;
-////  right: 0;
-////  top: 0;
-////}
-//
-//
-////.intro {
-////  position: relative;
-////  // outline: 5px solid red;
-////  text-align: center;
-////  padding-left: 25px;
-////  padding-right: 25px;
-////  padding-top: 403px;
-////  padding-bottom: 40px;
-////  // margin-bottom: 35px;
-////  font-size: 18px;
-////line-height: 26px;
-////
-////
-////  @media (max-width: @mobile-width-only) {
-////    background: url(../img/intro-triangle1.svg);
-////    background-size: cover;
-////    background-repeat: no-repeat;
-////    background-position: bottom;
-////  }
-////
-////  @media (min-width: @tablet-width) {
-////    padding-top: 540px;
-////    padding-left: 120px;
-////    padding-right: 120px;
-////    padding-bottom: 40px;
-////  }
-////
-////  @media (min-width: @desktop-width) {
-////    padding-top: 553px;
-////    padding-left: 360px;
-////    padding-right: 360px;
-////    padding-bottom: 28px;
-////  }
-////}
-////
-////.intro__title {
-////  font-size: 18px;
-////  line-height: 26px;
-////  font-weight: bold;
-////  margin-bottom: 30px;
-////
-////  @media (min-width: @tablet-width) {
-////  font-size: 21px;
-////  line-height: 26px;
-////}
-////}
-////
-////.intro__describe {
-////  font-size: 14px;
-////  line-height: 26px;
-////  @media (min-width: @tablet-width) {
-////    white-space: nowrap;
-////
-////  }
-////}
+
